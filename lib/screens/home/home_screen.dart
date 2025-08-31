@@ -48,9 +48,10 @@ class HomeScreen extends StatelessWidget {
           topRight: Radius.circular(20),
         ),
         child: BottomAppBar(
-          color: const Color.fromARGB(255, 24, 116, 191),
-          surfaceTintColor: const Color.fromARGB(255, 24, 116, 191),
+          color: const Color(0xFF1B7BB4),
+          surfaceTintColor: const Color(0xFF1B7BB4),
           elevation: 12,
+          shape: const CircularNotchedRectangle(),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -71,7 +72,7 @@ class HomeScreen extends StatelessWidget {
         onPressed: () {
           
         },
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFF1B7BB4),
         child: const Icon(Icons.camera),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
