@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:presensi_app_new/screens/attandence/scan_barcode_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -507,7 +508,10 @@ class HomeScreen extends StatelessWidget {
       // Floating Action Button (opsional, untuk contoh)
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => ScanBarcodeScreen()),
+          );
         },
         backgroundColor: const Color(0xFF1B7BB4),
         child: const Icon(Icons.camera, color: Colors.white, size: 32,),
