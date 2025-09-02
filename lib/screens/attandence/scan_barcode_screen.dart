@@ -34,7 +34,10 @@ class ScanBarcodeScreen extends StatelessWidget{
 
       //Body Section
       body: const Center(
-        child: CameraView(),
+        child: Padding(
+          padding: EdgeInsets.only(right: 16, left: 16),
+          child: CameraView(),
+        ),
       ),
 
     );
