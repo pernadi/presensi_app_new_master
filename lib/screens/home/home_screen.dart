@@ -10,7 +10,14 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFF5F5F5),
       // AppBar di bagian atas
       appBar: AppBar(
-        centerTitle: false,
+        title: Text(
+          'DELNity',
+          style: TextStyle(
+            color: const Color(0xFF1B7BB4),
+            fontSize: 24,
+            fontWeight: FontWeight.w600
+          ),
+        ),
         backgroundColor: Colors.white,
         surfaceTintColor: Colors.transparent, // Menghilangkan overlay
         shadowColor: Colors.black54, // Bayangan lebih jelas
