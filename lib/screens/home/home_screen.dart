@@ -11,6 +11,13 @@ class HomeScreen extends StatelessWidget {
       // AppBar di bagian atas
       appBar: AppBar(
         centerTitle: false,
+        title: Text(
+          'DELNity',
+          style: TextStyle(
+              color: const Color(0xFF1B7BB4),
+              fontSize: 24,
+              fontWeight: FontWeight.w600),
+        ),
         backgroundColor: Colors.white,
         surfaceTintColor: Colors.transparent, // Menghilangkan overlay
         shadowColor: Colors.black54, // Bayangan lebih jelas
@@ -22,79 +29,55 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.notification_important_rounded, color: Color(0xFF1B7BB4),),
-            onPressed: () {
-              
-            },
+            icon: const Icon(
+              Icons.notification_important_rounded,
+              color: Color(0xFF1B7BB4),
+            ),
+            onPressed: () {},
           ),
         ],
       ),
-
-
 
       // Body utama
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Card( 
-                  color: const Color(0xFF1B7BB4),
-                  surfaceTintColor: const Color(0xFF1B7BB4),
-                  elevation: 8, // Bayangan kartu
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16), // Radius sudut kartu
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(12),
-                          child: const Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              // Avatar
-                              CircleAvatar(
-                                radius: 22,
-                                backgroundColor: Colors.white,
-                                child: Icon(Icons.person, size: 30, color: Color(0xFF1B7BB4)),
-                              ),
-                              SizedBox(width: 12),
+            padding: const EdgeInsets.all(8.0),
+            child: Card(
+              color: const Color(0xFF1B7BB4),
+              surfaceTintColor: const Color(0xFF1B7BB4),
+              elevation: 8, // Bayangan kartu
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16), // Radius sudut kartu
+              ),
+              child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        child: const Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Avatar
+                            CircleAvatar(
+                              radius: 22,
+                              backgroundColor: Colors.white,
+                              child: Icon(Icons.person,
+                                  size: 30, color: Color(0xFF1B7BB4)),
+                            ),
+                            SizedBox(width: 12),
 
-                              // Nama & Jabatan
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "Gabriel Panjaitan",
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    SizedBox(height: 2),
-                                    Text(
-                                      "D-IV Teknologi Rekayasa Perangkat Lunak",
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-
-                              // Jam & Tanggal
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.end,
+                            // Nama & Jabatan
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "10.37 WIB",
+                                    "Gabriel Panjaitan",
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
@@ -103,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                   SizedBox(height: 2),
                                   Text(
-                                    "Minggu, 20 Juli 2025",
+                                    "D-IV Teknologi Rekayasa Perangkat Lunak",
                                     style: TextStyle(
                                       fontSize: 12,
                                       color: Colors.white,
@@ -111,46 +94,71 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                            ],
+                            ),
+
+                            // Jam & Tanggal
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  "10.37 WIB",
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                SizedBox(height: 2),
+                                Text(
+                                  "Minggu, 20 Juli 2025",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      SizedBox(
+                        width: double.infinity, // match_parent
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 14), // tinggi (wrap)
+                            elevation: 3,
+                          ),
+                          onPressed: () {
+                            print("Absen Masuk & Keluar ditekan");
+                          },
+                          child: const Text(
+                            "Absen Masuk dan Keluar",
+                            style: TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.w500),
                           ),
                         ),
-
-
-                        const SizedBox(height: 12),
-
-                        SizedBox(
-                          width: double.infinity, // match_parent
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.white,
-                              foregroundColor: Colors.black,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              padding: const EdgeInsets.symmetric(vertical: 14), // tinggi (wrap)
-                              elevation: 3,
-                            ),
-                            onPressed: () {
-                              print("Absen Masuk & Keluar ditekan");
-                            },
-                            child: const Text(
-                              "Absen Masuk dan Keluar",
-                              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                        )
-                      ],
-                    )
-                  ),
+                      )
+                    ],
+                  )),
             ),
           ),
 
-          const SizedBox(height: 12,),
+          const SizedBox(
+            height: 12,
+          ),
 
           const Padding(
             padding: EdgeInsets.only(right: 16, left: 16),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween, // kasih jarak max
+              mainAxisAlignment:
+                  MainAxisAlignment.spaceBetween, // kasih jarak max
               children: [
                 Padding(
                   padding: EdgeInsets.all(0),
@@ -162,41 +170,41 @@ class HomeScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                            color: Colors.black,
+                          color: Colors.black,
                         ),
                       ),
                       SizedBox(height: 2),
-                        Text(
-                          "Daftar mata kuliah untuk hari ini",
-                          style: TextStyle(
+                      Text(
+                        "Daftar mata kuliah untuk hari ini",
+                        style: TextStyle(
                             fontSize: 14,
                             color: Colors.black,
-                            fontStyle: FontStyle.italic
-                          ),
-                        ),
-                      ],
+                            fontStyle: FontStyle.italic),
+                      ),
+                    ],
                   ),
                 ),
-
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    "Lihat semua",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.blue,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Lihat semua",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.blue,
+                      ),
                     ),
-                  ),
-                ],
-              )
+                  ],
+                )
               ],
             ),
           ),
 
-          const SizedBox(height: 12,),
+          const SizedBox(
+            height: 12,
+          ),
 
           //List Cardview
           Padding(
@@ -206,7 +214,8 @@ class HomeScreen extends StatelessWidget {
               surfaceTintColor: const Color.fromARGB(255, 255, 255, 255),
               elevation: 4, // Bayangan kartu
               child: Padding(
-                padding: const EdgeInsets.only(right: 16, left: 16, top: 16, bottom: 16),
+                padding: const EdgeInsets.only(
+                    right: 16, left: 16, top: 16, bottom: 16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -214,7 +223,9 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Image.asset('assets/people.png', width: 50, height: 50),
-                        const SizedBox(width: 5,),
+                        const SizedBox(
+                          width: 5,
+                        ),
                         const Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -238,8 +249,7 @@ class HomeScreen extends StatelessWidget {
                           ],
                         )
                       ],
-                    ), 
-
+                    ),
                     const Text(
                       "Absen",
                       style: TextStyle(
@@ -247,20 +257,22 @@ class HomeScreen extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         color: Colors.blue,
                       ),
-
                     )
                   ],
                 ),
-              ),  
+              ),
             ),
           ),
 
-          const SizedBox(height: 12,),
+          const SizedBox(
+            height: 12,
+          ),
 
           const Padding(
             padding: EdgeInsets.only(right: 16, left: 16),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween, // kasih jarak max
+              mainAxisAlignment:
+                  MainAxisAlignment.spaceBetween, // kasih jarak max
               children: [
                 Padding(
                   padding: EdgeInsets.all(0),
@@ -272,41 +284,41 @@ class HomeScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                            color: Colors.black,
+                          color: Colors.black,
                         ),
                       ),
                       SizedBox(height: 2),
-                        Text(
-                          "Daftar absensi kamu di mata kuliah hari ini",
-                          style: TextStyle(
+                      Text(
+                        "Daftar absensi hari ini",
+                        style: TextStyle(
                             fontSize: 14,
                             color: Colors.black,
-                            fontStyle: FontStyle.italic
-                          ),
-                        ),
-                      ],
+                            fontStyle: FontStyle.italic),
+                      ),
+                    ],
                   ),
                 ),
-
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    "Lihat semua",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.blue,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Lihat semua",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.blue,
+                      ),
                     ),
-                  ),
-                ],
-              )
+                  ],
+                )
               ],
             ),
           ),
 
-          const SizedBox(height: 12,),
+          const SizedBox(
+            height: 12,
+          ),
 
           const Padding(
             padding: EdgeInsets.all(16),
@@ -320,8 +332,11 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Icon(Icons.check_circle, color: Color.fromARGB(255, 31, 161, 98),size: 30),
-                        SizedBox(width: 5,),
+                        Icon(Icons.check_circle,
+                            color: Color.fromARGB(255, 31, 161, 98), size: 30),
+                        SizedBox(
+                          width: 5,
+                        ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -371,15 +386,16 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
 
-                SizedBox(height: 8,),
-
-                Divider(
-                  color: Colors.grey,   // warna garis
-                  thickness: 1,         // tebal garis
-                  indent: 2,           // jarak dari kiri
-                  endIndent: 2,        // jarak dari kanan
+                SizedBox(
+                  height: 8,
                 ),
 
+                Divider(
+                  color: Colors.grey, // warna garis
+                  thickness: 1, // tebal garis
+                  indent: 2, // jarak dari kiri
+                  endIndent: 2, // jarak dari kanan
+                ),
 
                 //Not done attandance
                 Row(
@@ -388,8 +404,11 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Icon(Icons.info_rounded, color: Color.fromARGB(255, 227, 22, 22),size: 30),
-                        SizedBox(width: 5,),
+                        Icon(Icons.info_rounded,
+                            color: Color.fromARGB(255, 227, 22, 22), size: 30),
+                        SizedBox(
+                          width: 5,
+                        ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -439,23 +458,21 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
 
-                SizedBox(height: 8,),
+                SizedBox(
+                  height: 8,
+                ),
 
                 Divider(
-                  color: Colors.grey,   // warna garis
-                  thickness: 1,         // tebal garis
-                  indent: 2,           // jarak dari kiri
-                  endIndent: 2,        // jarak dari kanan
+                  color: Colors.grey, // warna garis
+                  thickness: 1, // tebal garis
+                  indent: 2, // jarak dari kiri
+                  endIndent: 2, // jarak dari kanan
                 )
               ],
             ),
-
           )
-
         ],
       ),
-
-
 
       // BottomAppBar di bagian bawah
       bottomNavigationBar: ClipRRect(
@@ -475,7 +492,8 @@ class HomeScreen extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 16.0), // Geser ikon home ke kiri
+                  padding: const EdgeInsets.only(
+                      left: 16.0), // Geser ikon home ke kiri
                   child: IconButton(
                     icon: const Icon(
                       Icons.home,
@@ -490,7 +508,8 @@ class HomeScreen extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 16.0), // Geser ikon person ke kanan
+                  padding: const EdgeInsets.only(
+                      right: 16.0), // Geser ikon person ke kanan
                   child: IconButton(
                     icon: const Icon(
                       Icons.person,
@@ -514,7 +533,11 @@ class HomeScreen extends StatelessWidget {
           );
         },
         backgroundColor: const Color(0xFF1B7BB4),
-        child: const Icon(Icons.camera, color: Colors.white, size: 32,),
+        child: const Icon(
+          Icons.camera,
+          color: Colors.white,
+          size: 32,
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );

@@ -25,27 +25,14 @@ class _SplashScreenState extends State<SplashScreen>{
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Ganti dengan path ke logo atau gambar Anda
-            Icon(
-              Icons.calendar_view_day,
-              size: 100,
-              color: Colors.blueAccent,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Selamat Datang!',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.blueAccent,
-              ),
-            ),
+            Image.asset('assets/logo.png', width: 300, height: 300),
+            
           ],
         ),
       ),
