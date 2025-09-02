@@ -508,9 +508,9 @@ class HomeScreen extends StatelessWidget {
       // Floating Action Button (opsional, untuk contoh)
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushReplacement(
+          Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => ScanBarcodeScreen()),
+            MaterialPageRoute(builder: (_) => const ScanBarcodeScreen()),
           );
         },
         backgroundColor: const Color(0xFF1B7BB4),

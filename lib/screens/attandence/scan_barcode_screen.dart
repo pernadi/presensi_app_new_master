@@ -10,26 +10,11 @@ class ScanBarcodeScreen extends StatelessWidget{
       backgroundColor: const Color(0xFF1B7BB4),
 
       appBar: AppBar(
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.notification_important_rounded, color: Colors.white),
-            onPressed: () {
-              
-            },
-          ),
-        ],
-        centerTitle: false,
-        title: const Text(
-          "Scan Barcode Absensi",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.white, // warna teks
-          ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context), // 👈 kembali ke halaman sebelumnya
         ),
-        backgroundColor: Colors.transparent,
-        surfaceTintColor: Colors.transparent, // Menghilangkan overlay
-        shadowColor: Colors.black54, // Bayangan lebih jelas
+        title: const Text("Presensi App"),
       ),
 
       //Body Section
