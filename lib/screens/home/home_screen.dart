@@ -138,10 +138,13 @@ class HomeScreen extends StatelessWidget {
                               elevation: 3,
                             ),
                             onPressed: () {
-                              print("Absen Masuk & Keluar ditekan");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (_) => const ScanBarcodeScreen()),
+                              );
                             },
                             child: const Text(
-                              "Absen Masuk dan Keluar",
+                              "Absen Matakuliah",
                               style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                             ),
                           ),
@@ -284,7 +287,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 2),
                         Text(
-                          "Daftar absensi kamu di mata kuliah hari ini",
+                          "Daftar absensi hari ini",
                           style: TextStyle(
                             fontSize: 14,
                             color: Colors.black,
